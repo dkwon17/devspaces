@@ -11,7 +11,7 @@ components:
       cpuLimit: 2000m
       volumeMounts:
         - name: images
-          path: /home/user/.local/share/containers/storage
+          path: /home/user/.local
       env:
         - name: CONCURRENTLY_OPTS
           value: -m 1
