@@ -10,7 +10,7 @@ components:
       cpuRequest: 100m
       cpuLimit: 2000m
       volumeMounts:
-        - name: images
+        - name: local
           path: /home/user/.local/
       env:
         - name: CONCURRENTLY_OPTS
@@ -22,7 +22,7 @@ components:
           targetPort: 5432
   - volume:
       ephemeral: true
-    name: images
+    name: local
 commands:
   - id: podman-login
     exec:
