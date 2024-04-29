@@ -20,9 +20,9 @@ components:
           exposure: internal
           protocol: https
           targetPort: 5432
-  - name: images
-    volume:
-      size: 35Gi
+  - volume:
+      ephemeral: true
+    name: images
 commands:
   - id: podman-login
     exec:
